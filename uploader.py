@@ -45,8 +45,7 @@ conn = boto.connect_s3(AWS_ACCESS_KEY_ID,
         AWS_SECRET_ACCESS_KEY)
 
 
-bucket = conn.create_bucket(bucket_name,
-    location=boto.s3.connection.Location.DEFAULT)
+bucket = conn.get_bucket(bucket_name)
 
 total_count = len(files)
 counter = 1
